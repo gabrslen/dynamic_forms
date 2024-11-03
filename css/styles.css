@@ -1,6 +1,17 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
+#container {
+    display: block;
+}
+
+#div-menu {
+    display: block;
+}
+
+#btn-class {
+    display: block;
+}

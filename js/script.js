@@ -1,17 +1,18 @@
 
-export function newElement(tag, atributos = {}, html = '') {
-    const elemento = document.createElement(tag)
-    for (const chave in atributos) {
-        if (atributos.hasOwnProperty(chave)) {
-            elemento.setAttribute(chave, atributos[chave])
-        }
-    }
-    if (html) {
-        elemento.innerHTML = html
-    }
-    return elemento
-}
+import { newElement } from "./elements.js"
+
+const container = document.getElementById('container')
+
+const divMenu = newElement('div', {'id': 'div-menu', 'class': 'div-menu'}, '')
+const botao = newElement('button', {'id': 'btn-class', 'class': 'btn-class'}, 'Botão')
+
+container.appendChild(divMenu)
+divMenu.appendChild(botao)
+
+botao.addEventListener('click', () => {
+    // Lógica do botão
+})
 
 document.addEventListener('DOMContentLoaded', () => {
-    // tempo de execução.
-});
+    // Tempo de execuçao
+})
