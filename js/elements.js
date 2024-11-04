@@ -1,13 +1,13 @@
 
-export function newElement(tag, atributos = {}, html = '') {
-    const elemento = document.createElement(tag)
-    for (const chave in atributos) {
-        if (atributos.hasOwnProperty(chave)) {
-            elemento.setAttribute(chave, atributos[chave])
+export function newElement(tag, attributes = {}, html = '') {
+    const element = document.createElement(tag)
+    for (const key in attributes) {
+        if (attributes.hasOwnProperty(key)) {
+            element.setAttribute(key, attributes[key])
         }
     }
     if (html) {
-        elemento.innerHTML = html
+        element.innerHTML = html
     }
-    return elemento
+    return element
 }
