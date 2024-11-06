@@ -4,18 +4,6 @@
     box-sizing: border-box;
 }
 
-.container {
-    display: block;
-}
-
-.div-menu {
-    display: block;
-}
-
-.btn-class {
-    display: block;
-}
-
 .form-blur {
     position: fixed;
     top: 0;
