@@ -1,4 +1,6 @@
-export function createFields(className, dict, form, isRoot = true) {
+import * as cb from './classBase.js';
+
+export function switchFields(className, isRoot = true) {
     const classConfig = dict[className];
 
     if (!classConfig) {
@@ -7,7 +9,7 @@ export function createFields(className, dict, form, isRoot = true) {
     }
 
     if (classConfig.inherits) {
-        createFields(classConfig.inherits, dict, form, false);
+        switchFields(classConfig.inherits, false);
     }
 
     const fields = classConfig.fields;
@@ -62,10 +64,6 @@ export function createFields(className, dict, form, isRoot = true) {
                 console.error(`Tipo de campo não reconhecido: ${fieldConfig.type}`)
         }
     })
-}
-
-function createFields(){
-    console.log('createFields')
 }
 
 function createSelectField(){

@@ -1,4 +1,4 @@
-import { createFields } from "./fields.js"
+import { switchFields } from "./fields.js"
 
 export function newElement(tag, attributes = {}, html = '') {
     const element = document.createElement(tag)
