@@ -1,4 +1,6 @@
 import * as cb from './classBase.js';
+import { class_dict } from './classDicts.js';
+export const dict = linkClassesToDict(class_dict)
 
 export function switchFields(className, isRoot = true) {
     const classConfig = dict[className];
@@ -65,6 +67,19 @@ export function switchFields(className, isRoot = true) {
         }
     })
 }
+
+
+function linkClassesToDict(dict) {
+    Object.keys(dict).forEach(className => {
+        try {
+            dict[className].class = cb[className];
+            if (!dict[className].class) throw new Error();
+        } catch (error) {
+            console.error(`Erro ao vincular a classe ${className}: Classe não encontrada em classBase.js`);
+        }
+    });
+    return dict;
+  }
 
 function createSelectField(){
     console.log('createSelectField')
