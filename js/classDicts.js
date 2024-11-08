@@ -1,83 +1,84 @@
 export const class_dict = {
-    Classe: {
+    Class: {
         hasSubmitButton: false,
         fields: {
-            id_classe: {
+            class_id: {
                 type: 'input',
                 inputType: 'number',
-                placeholder: 'Class id'
+                placeholder: 'Class ID'
             },
-            objeto_aninhado: {
+            nested_object: {
                 type: 'class',
-                className: 'Aninhada'
+                className: 'Nested'
             },
         }
     },
-    Aninhada: {
+    Nested: {
         hasSubmitButton: false,
         fields: {
-            nome_aninhada: {
+            nested_name: {
                 type: 'input',
-                placeholder: 'Classe Aninhada'
+                placeholder: 'Nested Class'
             }
         }
     },
-    NovaClasse: {
+    NewClass: {
         hasSubmitButton: false,
-        inherits: 'Classe',
+        inherits: 'Class',
         fields: {
             select: {
                 type: 'select',
-                options: ['opção1', 'opção2', 'opção3']
+                options: ['option1', 'option2', 'option3']
             },
             string: {
                 type: 'input',
-                placeholder: 'Digite o placeholder'
+                placeholder: 'Enter placeholder'
             },
-            inteiro: {
+            integer: {
                 type: 'input',
                 inputType: 'number',
-                placeholder: 'Digite o placeholder'
+                placeholder: 'Enter placeholder'
             },
             radio: {
                 type: 'radio',
-                options: ['opção1', 'opção2', 'opção3']
+                options: ['option1', 'option2', 'option3']
             },
             check: {
                 type: 'checkbox'
             },
-            list: {
+            array: {
                 type: 'array',
-                placeholder: 'Digite o placeholder'
+                placeholder: 'Enter placeholder'
             },
-            texto_longo: {
+            text_area: {
                 type: 'textarea',
-                placeholder: 'Digite o placeholder'
+                placeholder: 'Enter placeholder'
             },
-            arquivo: {
+            file: {
                 type: 'file',
             },
-            data: {
+            date: {
                 type: 'date'
             },
-            data_hora_local: {
+            datetime_local: {
                 type: 'datetime-local'
             },
-            hora: {
+            time: {
                 type: 'time'
             },
-            faixa: {
+            range: {
                 type: 'range',
                 min: 0,
                 max: 100
             },
-            cor: {
+            color: {
                 type: 'color'
             },
-            campo_oculto: {
+            hidden_field: {
                 type: 'hidden',
-                value: 'valor_oculto'
+                value: 'hidden_value'
             }
         }
     }
 }
+

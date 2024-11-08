@@ -1,34 +1,32 @@
-
-export class Classe {
-    constructor(id_classe, objeto_aninhado){
-        this.id_classe = id_classe
-        this.objeto_aninhado = objeto_aninhado
+export class Class {
+    constructor(class_id, nested_object){
+        this.class_id = class_id;
+        this.nested_object = nested_object;
     }
 }
 
-export class Aninhada {
-    constructor(nome_aninhada) {
-        this.nome_aninhada = nome_aninhada
+export class Nested {
+    constructor(nested_name) {
+        this.nested_name = nested_name;
     }
 }
 
-export class NovaClasse extends Classe {
-    constructor(id_classe, select, string, inteiro, radio, check, list, texto_longo, arquivo, data, data_hora_local, hora, faixa, cor, campo_oculto){
-        super(id_classe)
-        this.select = select
-        this.string = string
-        this.inteiro = inteiro
-        this.radio = radio
-        this.check = check
-        this.list = list
-        this.texto_longo = texto_longo
-        this.arquivo = arquivo
-        this.data = data
-        this.data_hora_local = data_hora_local
-        this.hora = hora
-        this.faixa = faixa
-        this.cor = cor
-        this.campo_oculto = campo_oculto
+export class NewClass extends Class {
+    constructor(class_id, select, string, integer, radio, check, array, text_area, file, date, datetime_local, time, range, color, hidden_field){
+        super(class_id);
+        this.select = select;
+        this.string = string;
+        this.integer = integer;
+        this.radio = radio;
+        this.check = check;
+        this.array = array;
+        this.text_area = text_area;
+        this.file = file;
+        this.date = date;
+        this.datetime_local = datetime_local;
+        this.time = time;
+        this.range = range;
+        this.color = color;
+        this.hidden_field = hidden_field;
     }
 }
-
